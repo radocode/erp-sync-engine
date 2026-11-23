@@ -4,7 +4,10 @@
   "description": "Bidirectional ERP sync engine with SHA-256 loop prevention, Redis per-tenant rate limiting, distributed OAuth locks, and PostgreSQL transactional outbox.",
   "type": "module",
   "scripts": {
+    "start": "docker compose up -d --wait && npm run typecheck && npm run demo",
     "demo": "tsx src/demo.ts",
+    "demo:ephemeral": "npm start && docker compose down",
+    "stop": "docker compose down",
     "typecheck": "tsc --noEmit",
     "build": "tsc"
   },
