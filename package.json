@@ -1,0 +1,21 @@
+{
+  "name": "erp-sync-engine",
+  "version": "1.0.0",
+  "description": "Bidirectional ERP sync engine with SHA-256 loop prevention, Redis per-tenant rate limiting, distributed OAuth locks, and PostgreSQL transactional outbox.",
+  "type": "module",
+  "scripts": {
+    "demo": "tsx src/demo.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "ioredis": "^5.4.1",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
